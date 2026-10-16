@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ubigeo-cli"
+version = "0.1.0"
+description = "Busca y valida ubigeos del INEI (Peru) desde la terminal o Python"
+requires-python = ">=3.9"
+readme = "README.md"
+license = { text = "MIT" }
+
+[project.scripts]
+ubigeo = "ubigeo_cli.cli:main"
+
+[tool.setuptools]
+packages = ["ubigeo_cli"]
+
+[tool.setuptools.package-data]
+ubigeo_cli = ["ubigeo_inei_2022.csv"]
